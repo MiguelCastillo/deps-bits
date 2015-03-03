@@ -1,0 +1,28 @@
+{
+  "name": "deps-bits",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "scripts": {},
+  "dependencies": {
+    "pulling-deps": "~0.0.5"
+  },
+  "browser": {},
+  "directories": {
+    "test": "tests"
+  },
+  "description": "Process amd and cjs dependencies in bit runner and bit imports",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MiguelCastillo/deps-bits.git"
+  },
+  "keywords": [
+    "bit-runner",
+    "bit-imports"
+  ],
+  "author": "Miguel Castillo <manchagnu@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MiguelCastillo/deps-bits/issues"
+  },
+  "homepage": "https://github.com/MiguelCastillo/deps-bits"
+}
