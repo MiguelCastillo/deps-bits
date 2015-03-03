@@ -1,7 +1,7 @@
 # deps-bits
 Process amd and cjs dependencies in [bit runner](https://github.com/MiguelCastillo/bit-runner).
 
-> Side note: this module is also used by [bit imports](https://github.com/MiguelCastillo/bit-imports) to process dependencies in the browser. And that possible because both tools use [bit loader](https://github.com/MiguelCastillo/bit-loader) to do the heavy lifting.
+> Side note: this module is also used by [bit imports](https://github.com/MiguelCastillo/bit-imports) to process dependencies in the browser. And that's possible because both tools use [bit loader](https://github.com/MiguelCastillo/bit-loader)'s transformation workflow.
 
 
 ### Configuration `bitrunnerfile.js`
@@ -22,9 +22,9 @@ bitRunner.register('default', function buildPipeline(task) {
 });
 ```
 
-#### Configure the `deps-bits` plugin
+#### Configure it
 
-This module uses [acorn](http://marijnhaverbeke.nl/acorn/) internally, and the configuration settings provided here are forwarded right to it. So, please refer to [acorn's docs](http://marijnhaverbeke.nl/acorn/) for details on the available settings.
+deps bits uses [acorn](http://marijnhaverbeke.nl/acorn/) internally, and the configuration settings provided here are forwarded right to it. So, please refer to [acorn's docs](http://marijnhaverbeke.nl/acorn/) for details on the available options.
 
 ``` javascript
 var bitRunner = require('bit-runner');
