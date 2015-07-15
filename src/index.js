@@ -7,7 +7,7 @@ var pullDeps = require('pulling-deps');
  *  processed for dependencies
  */
 function dependencies(data) {
-  _run(data, this.options);
+  return _run(data, this.options);
 }
 
 
@@ -23,7 +23,7 @@ function dependencies(data) {
  */
 dependencies.config = function(options) {
   return function dependencies(data) {
-    _run(data, options);
+    return _run(data, options);
   };
 };
 
@@ -31,13 +31,15 @@ dependencies.config = function(options) {
 function _run(data, options) {
   options = options || {};
   if (!ignoreModule(data, options.ignore)) {
-    loadDependencies(data, pullDeps(data.source, options).dependencies);
+    return loadDependencies(data, pullDeps(data.source, options).dependencies);
   }
 }
 
 function loadDependencies(data, deps) {
   if (deps.length) {
-    data.deps = data.deps.concat(deps);
+    return {
+      deps: data.deps.concat(deps)
+    };
   }
 }
 
