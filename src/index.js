@@ -6,8 +6,8 @@ var pullDeps = require('pulling-deps');
  * @param {{source: source}} data - Object with `source` property to be
  *  processed for dependencies
  */
-function dependencies(data) {
-  return _run(data, this.options);
+function dependencies(data, options) {
+  return run(data, options);
 }
 
 
@@ -23,12 +23,12 @@ function dependencies(data) {
  */
 dependencies.config = function(options) {
   return function dependencies(data) {
-    return _run(data, options);
+    return run(data, options);
   };
 };
 
 
-function _run(data, options) {
+function run(data, options) {
   options = options || {};
   if (!ignoreModule(data, options.ignore)) {
     return loadDependencies(data, pullDeps(data.source, options).dependencies);
