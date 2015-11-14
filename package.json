@@ -4,7 +4,7 @@
   "main": "src/index.js",
   "scripts": {},
   "dependencies": {
-    "pulling-deps": "~0.0.5"
+    "pulling-deps": "~0.1.1"
   },
   "browser": {},
   "directories": {
