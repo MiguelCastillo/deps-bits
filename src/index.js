@@ -29,10 +29,7 @@ dependencies.config = function(options) {
 
 
 function run(data, options) {
-  options = options || {};
-  if (!ignoreModule(data, options.ignore)) {
-    return loadDependencies(data, pullDeps(data.source, options).dependencies);
-  }
+  return loadDependencies(data, pullDeps(data.source, options).dependencies);
 }
 
 function loadDependencies(data, deps) {
@@ -41,10 +38,6 @@ function loadDependencies(data, deps) {
       deps: data.deps.concat(deps)
     };
   }
-}
-
-function ignoreModule(data, ignoreList) {
-  return ignoreList && ignoreList.length && ignoreList.indexOf(data.name) !== -1;
 }
 
 module.exports = dependencies;
