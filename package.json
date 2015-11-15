@@ -1,10 +1,10 @@
 {
   "name": "deps-bits",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "src/index.js",
   "scripts": {},
   "dependencies": {
-    "pulling-deps": "~0.1.1"
+    "pulling-deps": "~0.1.2"
   },
   "browser": {},
   "directories": {
