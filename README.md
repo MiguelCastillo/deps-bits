@@ -1,4 +1,6 @@
 # deps-bits
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/MiguelCastillo/deps-bits.svg)](https://greenkeeper.io/)
 Process amd and cjs dependencies in [bit runner](https://github.com/MiguelCastillo/bit-runner).
 
 > Side note: this module is also used by [bit imports](https://github.com/MiguelCastillo/bit-imports) to process dependencies in the browser.
